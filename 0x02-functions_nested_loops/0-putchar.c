@@ -2,7 +2,7 @@
 
 /**
  * main - print _putchar
- * is written by mbah
+ * is written by Doris
  * Return: 0
  */
 
