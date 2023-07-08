@@ -3,17 +3,17 @@
 
 /**
 * main - this prints the name of the program
-* @argc: these are number of arguments
-* @argv: this is an array of arguments
+* @argc: these are counts of arguments
+* @argv: this is an vector of arguments
 *
 * Return: Always 0 (Success)
 */
 
-int main(int argc __attribute__((unused)), char *argv[])
-
+int main(int argc, char *argv[])
 {
+	(void) argc;
 
-printf("%s\n", *argv);
+printf("%s\n", argv[0]);
 
 return (0);
 
