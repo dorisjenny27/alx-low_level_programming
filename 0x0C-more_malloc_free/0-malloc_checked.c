@@ -15,6 +15,7 @@ e = malloc(b);
 if (e == NULL)
 exit(98);
 return (e);
+}
 
 
 
