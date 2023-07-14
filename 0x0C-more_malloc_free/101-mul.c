@@ -4,8 +4,8 @@
 #include <ctype.h>
 
 /**
-* _is_zero - this determines if any number is zero
-* @argv: the argument vector.
+* _is_zero - determines if any number is zero
+* @argv: argument vector.
 *
 * Return: no return.
 */
@@ -35,9 +35,9 @@ exit(0);
 }
 
 /**
-* _initialize_array - this set memery to zero in a new array
-* @ar: this is the char array.
-* @lar: this is the length of the char array.
+* _initialize_array - set memery to zero in a new array
+* @ar: char array.
+* @lar: length of the char array.
 *
 * Return: pointer of a char array.
 */
@@ -54,8 +54,8 @@ return (ar);
 /**
 * _checknum - determines length of the number
 * and checks if number is in base 10.
-* @argv: this is the arguments vector.
-* @n: this is the row of the array.
+* @argv: arguments vector.
+* @n: row of the array.
 *
 * Return: length of the number.
 */
