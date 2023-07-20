@@ -1,6 +1,6 @@
 #include "function_pointers.h"
 /**
- * int_index: Writes a function that searches for an integer
+ * int_index - returns index if comparison = true, else -1
  * @array: array
  * @size: size of elements in array
  * @cmp: pointer to func of one of the 3 in main
@@ -20,3 +20,4 @@ int int_index(int *array, int size, int (*cmp)(int))
 	}
 	return (-1);
 }
+
