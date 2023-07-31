@@ -1,23 +1,20 @@
 #include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
 
-
 /**
-* list_len - check the code for ALX School students.
-* @h: name of the list
-* Return: the number of nodes.
-*/
+ * list_len - This returns the number of elements in a linked list
+ * @h: This actually points to the list_t list
+ *
+ * Return: This explains the number of elements in h
+ */
 size_t list_len(const list_t *h)
 {
-   int adex = 0;
+	size_t q = 0;
 
-
-   while (h)
-   {
-       adex++;
-       h = h->next;
-   }
-   return (adex);
+	while (h)
+	{
+		q++;
+		h = h->next;
+	}
+	return (q);
 }

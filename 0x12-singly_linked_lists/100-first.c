@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-/**
-* myStartupFun - This is the constructor attribute to myStartupFun
-*/
-void myStartupFun(void) __attribute__((constructor));
+void first(void) __attribute__ ((constructor));
 
 /**
-* myStartupFun - implementation of myStartupFun
-*/
-void myStartupFun(void)
+ * first - This outrighty prints a sentence
+ */
+void first(void)
 {
-   printf("You're beat! and yet, you must allow,\n");
-   printf("I bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n");
+	printf("I bore my house upon my back!\n");
 }
