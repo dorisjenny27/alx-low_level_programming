@@ -8,18 +8,18 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int l;
-	unsigned int dec_val = 0;
+int k;
+	unsigned int bed_lak = 0;
 
 	if (!b)
 		return (0);
 
-	for (l = 0; b[l]; l++)
+	for (k = 0; b[k]; k++)
 	{
-		if (b[l] < '0' || b[l] > '1')
+		if (b[k] < '0' || b[k] > '1')
 			return (0);
-		dec_val = 2 * dec_val + (b[l] - '0');
+		bed_lak = 2 * dec_val + (b[k] - '0');
 	}
 
-	return (dec_val);
+	return (bed_lak);
 }
