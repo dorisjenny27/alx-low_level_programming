@@ -7,7 +7,7 @@ void close_file(int fd);
 
 /**
  * create_buffer - This actually allocates 1024 bytes for a buffer.
- * @file: This is where the file buffer is storing chars for.
+ * @file: Thi is where the file buffer is storing chars for.
  *
  * Return: This actually points to the newly-allocated buffer.
  */
@@ -29,25 +29,25 @@ char *create_buffer(char *file)
 
 /**
  * close_file - This actually closes file descriptors.
- * @fd: This is actually the file descriptor to be closed.
+ * @fd: This is actually the  file descriptor to be closed.
  */
-void close_file(int gr)
+void close_file(int fd)
 {
-	int h;
+	int c;
 
-	h = close(gr);
+	c = close(fd);
 
-	if (h == -1)
+	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close gr %d\n", gr);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
 
 /**
  * main - This actually copies the contents of a file to another file.
- * @argc: This is the num of arguments supplied to the program.
- * @argv: This array points to the arguments.
+ * @argc: This is the numb of arguments supplied to the program.
+ * @argv: This is an array that  points to the arguments.
  *
  * Return: 0 on success.
  *
@@ -58,7 +58,7 @@ void close_file(int gr)
  */
 int main(int argc, char *argv[])
 {
-	int broom, to, r, w;
+	int from, to, r, w;
 	char *buffer;
 
 	if (argc != 3)
@@ -68,12 +68,12 @@ int main(int argc, char *argv[])
 	}
 
 	buffer = create_buffer(argv[2]);
-	broom = open(argv[1], O_RDONLY);
+	from = open(argv[1], O_RDONLY);
 	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
-		if (broom == -1 || r == -1)
+		if (from == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		r = read(broomm, buffer, 1024);
+		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (r > 0);
